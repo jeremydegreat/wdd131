@@ -172,3 +172,31 @@ footer p {
     color: #fff;
     text-align: center;
 }
+
+/* ------------------- MEDIA QUERY ------------------- */
+@media (max-width: 768px) {
+  main.content {
+    grid-template-columns: 1fr; /* stack cards vertically */
+  }
+
+  .header span {
+    font-size: 2rem; /* slightly smaller heading */
+  }
+
+  .profile-img,
+  .my-country-img {
+    position: static; /* remove absolute positioning */
+    margin: 2rem auto;
+  }
+
+  .header nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
