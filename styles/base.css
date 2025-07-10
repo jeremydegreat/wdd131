@@ -35,7 +35,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: #4CAF50;
+    background-color: #388E3C;
     /* max-width: 800px; */
 }
 
