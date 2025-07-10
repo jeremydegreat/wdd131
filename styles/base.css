@@ -25,7 +25,7 @@ body {
     text-align: center;
 }
 
-.header span {
+#course-tittle {
     display: block;
     padding: 1rem;
     font-size: 2.5rem;
@@ -68,6 +68,15 @@ main.content {
 }
 
 .card h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #2c3e50;
+}
+
+.card h2 {
     font-size: 1.2rem;
     text-align: center;
     color: #fff;
@@ -124,13 +133,13 @@ div.my-country {
 }
 
 
-div.my-country h2 {
+div.my-country h3 {
     display: inline-block;
     position: relative;
     text-align: center;
 }
 
-div.my-country h2::after {
+div.my-country h3::after {
     position: absolute;
     left: -50%;
     content: "";
