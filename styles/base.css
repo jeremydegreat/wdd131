@@ -159,7 +159,7 @@ footer p {
 }
 
 /* ------------------- MEDIA QUERY ------------------- */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   main.content {
     grid-template-columns: 1fr; /* stack cards vertically */
   }
