@@ -5,13 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <meta name="description" content="">
-    <meta name="author" content="Jeremy Great">
+    <meta name="author" content="Chinedu Jeremiah ILoabuchi">
 
     <!-- External Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Chango&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
 <body>
-    
+    <header class="header">
+        <h1>Nigeria</h1>
+    </header>
+    <div class="color"></div>
+    <main class="main">
+        <div class="container">
+
+            <!-- Hero Image -->
+            <div class="hero">
+                <picture>
+                    <!-- Image for small view -->
+                    <source srcset="images/nigeria-mobile.webp" media="(max-width: 600px)" type="image/webp">
+                    <!-- Image for Large view -->
+                    <source srcset="images/nigeria-large.webp" media="(min-width: 601px)" type="image/webp">
+                    <!-- Fallback jpg -->
+                    <img src="images/nigeria.jpg" alt="Hero image of Nigeria">
+                </picture>
+            </div>
+
+            <!-- Contents -->
+            <div class="content">
+                <div class="data">
+                    <h2>Data</h2>
+                    <table class="info">
+                        <tbody>
+                            <tr>
+                                <th>Area:</th>
+                                <td>923,769 sq km</td>
+                            </tr>
+                            <tr>
+                                <th>Population:</th>
+                                <td>223,804,632</td>
+                            </tr>
+                            <tr>
+                                <th>Capital:</th>
+                                <td>Abuja</td>
+                            </tr>
+                            <tr>
+                                <th>Languages:</th>
+                                <td>English (official) Hausa, Yoruba, Igbo</td>
+                            </tr>
+                            <tr>
+                                <th>Currency:</th>
+                                <td>Nigerian Naira (₦)</td>
+                            </tr>
+                            <tr>
+                                <th>Time Zone:</th>
+                                <td>UTC +1</td>
+                            </tr>
+                            <tr>
+                                <th>Calling Code:</th>
+                                <td>+234</td>
+                            </tr>
+                            <tr>
+                                <th>Internet TLD:</th>
+                                <td>.ng</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="weather">
+                    <div class="tb-head">
+                        <span>Weather</span>
+                        <img src="images/weatherIcon.svg" alt="Weather icon">
+                    </div>
+                    <table class="info">
+                        <tr>
+                            <th>Temperature</th>
+                            <td id="temperature"></td>
+                        </tr>
+                        <tr>
+                            <th>Conditions</th>
+                            <td>Partly Cloudy</td>
+                        </tr>
+                        <tr>
+                            <th>Wind</th>
+                            <td id="wind"></td>
+                        </tr>
+                        <tr>
+                            <th>Wind Chill</th>
+                            <td id="windchill"></td>
+                        </tr>
+                        <tr></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 💥Chinedu Jeremiah ILoabuchi💥 Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
