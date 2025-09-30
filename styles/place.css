@@ -172,37 +172,40 @@ tbody, tr {
 /* For mobile view */
 @media screen and (max-width: 600px) {
   .data, .weather {
-    width: 40px;
-    font-size: .5rem;
-    bottom: 5%;
-    right: 3%;
+    position: static;
+    width: 90vw;
+    min-width: 0;
+    margin: 1rem auto;
+    font-size: 0.9rem;
+    left: unset;
+    right: unset;
     top: unset;
+    bottom: unset;
+    height: auto;
+    box-sizing: border-box;
   }
 
   .data h2, .tb-head h2 {
-    font-size: .7rem;
-    padding: .2rem;
-    height: 30px;
-    margin: .3rem -1rem;
+    font-size: 1rem;
+    padding: .4rem;
+    height: auto;
+    margin: .5rem 0;
   }
 
-  .th-head img {
-    width: 30px;
-    height: 30px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-    margin-right: .3rem;
+  .tb-head img {
+    width: 32px;
+    height: 32px;
+    margin-right: .5rem;
   }
 
   .info th, .info td {
-    font-size: .5rem;
-    padding: .2rem .3rem;
-    width: 50%;
+    font-size: 0.9rem;
+    padding: .3rem .5rem;
+    width: auto;
     white-space: normal;
     word-break: break-word;
-   line-height: 1.2;
+    line-height: 1.4;
   }
-} 
+}
 
 
