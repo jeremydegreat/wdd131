@@ -1,0 +1,90 @@
+:root {
+    --font-size: 1rem;
+    --font-family: "Montserrat", sans-serif;
+    --color-primary: #333;
+    --color-secondary: #666;
+    --color-accent: #0077cc;
+    --color-bg: #f4f4f4;
+    --width: 400px;
+    --height: 600px;
+    --spacing: 1rem;
+    --max-width: 1220px;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+}
+
+
+
+.main, .footer {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing);
+}
+
+.main h1 {
+    text-align: center;
+    margin-bottom: var(--spacing);
+    color: var(--color-accent);
+    font-size: 2rem;
+}
+
+.image-gallery {
+    display: block;
+    gap: 1rem;
+    text-align: center;
+}
+
+.image-gallery img {
+    width: var(--width);
+    height: var(--height);
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    margin-bottom: var(--spacing);
+}
+
+.fade-img {
+    opacity: 0;
+    animation: fadein 2s ease-out forwards;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        filter: brightness(0);
+    }
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+.footer {
+    text-align: center;
+    font-size: .9rem;
+    padding: var(--spacing);
+    height: 80px; 
+    background-color: var(--color-secondary);
+}
+
+.footer p {
+    color: #f4f4f4;
+}
+
