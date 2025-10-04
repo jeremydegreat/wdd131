@@ -7,12 +7,13 @@
   <title>Temple Responsive Album</title>
   <meta name="description" content="Building a temple responsive album">
   <meta name="author" content="Jeremy Great">
-  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="icon" type="image/webp" href="images/myFavicon.webp">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
   <link rel="stylesheet" href="styles/temples-large.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Chango&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <script src="scripts/temples.js" defer></script>
+  <script src="scripts/filtered-temples.js" defer></script>
 </head>
 
 <body>
@@ -21,54 +22,16 @@
     <div class="hamburger" id="hamburger" aria-label="menu">&#9776;</div>
     <nav class="navlinks">
       <ul>
-        <li><a href="#" class="nav-links">Home</a></li>
-        <li><a href="#" class="nav-links">Old</a></li>
-        <li><a href="#" class="nav-links">New</a></li>
-        <li><a href="#" class="nav-links">Large</a></li>
-        <li><a href="#" class="nav-links">Small</a></li>
+        <li><a href="#" class="nav-links" id="home">Home</a></li>
+        <li><a href="#" class="nav-links" id="old">Old</a></li>
+        <li><a href="#" class="nav-links" id="new">New</a></li>
+        <li><a href="#" class="nav-links" id="large">Large</a></li>
+        <li><a href="#" class="nav-links" id="small">Small</a></li>
       </ul>
     </nav>
   </header>
   <main class="main">
-    <h2>Temple</h2>
-    <div class="container">
-      <figure>
-        <img src="images/temple1.jpg" class="img" alt="First album temple">
-        <figcaption class="img-caption">1st Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple2.jpg" class="img" alt="First album temple">
-        <figcaption class="img-caption">2nd Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple3.jpg" class="img" alt="First album temple">
-        <figcaption class="img-caption">3rd Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple4.jpg" class="img" alt="First album temple">
-        <figcaption class="img-caption">4th Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple5.jpg" class="img" alt="First album temple">
-        <figcaption class="img-caption">5th Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple6.jpg" class="img" alt="First album temple">
-        <figcaption class="img-caption">6th Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple7.jpg" class="img" alt="First album temple">
-        <figcaption class="img-caption">7th Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple8.jpg" class="img" alt="First album temple">
-        <figcaption class="img-caption">8th Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/temple9.jpg" class="img" alt="First album temple">
-        <figcaption class="img-caption">9th Temple</figcaption>
-      </figure>
-    </div>
+    <div class="temples-container"></div>
   </main>
   <footer class="footer">
     <p>©2025 ✨ Jeremy Great ✨ Nigeria</p>
