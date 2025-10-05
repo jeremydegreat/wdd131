@@ -71,11 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = "";
 
     temples.forEach(temple => {
+      // Created a Div element inside the container
       const templeCard = document.createElement('div');
+      // Gave it class name
       templeCard.classList.add('temple-card');
+      // Added contents to it
       templeCard.innerHTML = `
-        <img src="${temple.imageUrl}" alt="Image of ${temple.templeName}" loading="lazy"
-        style="width:500px; height:250px; object-fit:cover; border-radius:8px; display:block; margin:0 auto;">
+        <img src="${temple.imageUrl}" alt="Image of ${temple.templeName}" loading="lazy">
         <h3>${temple.templeName}</h3>
         <p>📍 <strong>Location:</strong> ${temple.location}</p>
         <p>📅 <strong>Dedicated:</strong> ${temple.dedicated}</p>
