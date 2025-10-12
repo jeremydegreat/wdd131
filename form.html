@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <meta name="description" content="This is a product review form">
+  <meta name="author" content="Chinedu Jeremiah Iloabuchi">
+  <!-- Links -->
+  <link rel="icon" type="image/webp" href="images/myFavicon.webp">
+
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Chango&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+  <header class="header">
+    <h1>Product Review Form</h1>
+  </header>
+
+  <main>
+    <form action="review.html" method="get" class="form">
+      <!-- Product Name -->
+      <label for="productName">Product Name:</label>
+      <select id="productName" name="productName" required>
+        <option value="" disabled selected>Select a Product ...</option>
+        <option value="EcoSmart LED Bulb">EcoSmart LED Bulb</option>
+        <option value="PowerFlex Solar Panel">PowerFlex Solar Panel</option>
+        <option value="AquaPure Water Filter">AquaPure Water Filter</option>
+        <option value="ThermoHeat Smart Heater">ThermoHeat Smart Heater</option>
+        <option value="CleanAir Purifier">CleanAir Purifier</option>
+      </select>
+      <br><br>
+
+      <!-- Overall Rating -->
+      <fieldset class="rating-fieldset">
+        <legend>Overall Rating</legend>
+        <div class="rating-group">
+            <label>☆</label>
+            <input type="radio" id="rate1" name="rating" value="1" required>
+        </div>
+        <div class="rating-group">
+            <label>☆☆</label>
+            <input type="radio" id="rate2" name="rating" value="2">
+        </div>
+        <DIV class="rating-group">
+            <label>☆☆☆</label>
+            <input type="radio" id="rate3" name="rating" value="3">
+        </DIV>
+        <div class="rating-group">
+            <label>☆☆☆☆</label>
+            <input type="radio" id="rate4" name="rating" value="4">
+        </div>
+        <div class="rating-group">
+            <label>☆☆☆☆☆</label>
+            <input type="radio" id="rate5" name="rating" value="5">
+        </div>
+      </fieldset>
+      <p class="emphasis-note"><em>All radio buttons share the same "name" so only one can be selected.</em></p>
+      <br>
+
+      <!-- Date of Installation -->
+      <label for="installDate">Date of Installation:</label>
+      <input type="date" id="installDate" name="installDate" required>
+      <br><br>
+
+      <!-- Useful Features -->
+      <fieldset class="checkbox">
+        <legend>Useful Features (check all that apply):</legend>
+        <label> <input type="checkbox" id="feature1" name="features" value="Durability">Durability</label><br>
+        <label><input type="checkbox" id="feature2" name="features" value="Energy Efficiency"> Energy Efficiency</label><br>
+        <label><input type="checkbox" id="feature3" name="features" value="Ease of Use"> Ease of Use</label><br>
+        <label><input type="checkbox" id="feature4" name="features" value="Design"> Design</label><br>
+        <label><input type="checkbox" id="feature5" name="features" value="Affordability"> Affordability</label>
+      </fieldset>
+      <br />
+
+      <!-- Written Review -->
+      <label for="reviewText">Written Review<em class="emphasis-note">(Optional)</em></label><br>
+      <textarea id="reviewText" name="reviewText" rows="5" cols="40" placeholder="Write your review here (optional)..."></textarea>
+      <br><br>
+
+      <!-- User Name -->
+      <label for="userName">Your Name:</label>
+      <input type="text" id="userName" name="userName" placeholder="Enter your name (optional)">
+      <br><br>
+
+      <!-- Submit Button -->
+      <button class="button" id="submitBtn">Submit Review</button>
+    </form>
+  </main>
+
+  <footer>
+    <hr>
+    <p>&copy; 2025 | Product Review Assignment | Chinedu Jeremiah Iloabuchi</p>
+    <p id="lastmodified"></p>
+  </footer>
+</body>
+</html>

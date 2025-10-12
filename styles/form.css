@@ -1,0 +1,167 @@
+:root {
+    --HeadingFont:  'Poppins', sans-serif;
+    --bodyFont: 'Roboto', sans-serif;
+    --border-radius: 10px;
+    --header-bg-color: #0056b3;
+    --main-bg-color: #f7f9fc;
+    --footer-bg-color: #e9ecef;
+    
+}
+
+/* Universal selection */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--bodyFont);
+    background-color: #222222;
+}
+
+header, main, footer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header styling */
+.header {
+    background-color: var(--header-bg-color);
+    font-family: var(--HeadingFont);
+    padding: 1rem;
+    text-align: center;
+}
+
+.header h1 {
+    color: #e9ecef;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Main styling */
+.form {
+    padding: 1rem;
+    background-color: var(--main-bg-color);
+    color: #222222;
+}
+
+/* Consistency styling for Labels */
+label,
+.form label, 
+.rating-fieldset legend,
+.checkbox legend {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.form select {
+    width: 100%;
+    border-radius: var(--border-radius);
+    padding: .7rem;
+    border: 1px solid #0056b3;
+}
+
+.form select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.4);
+}
+
+/* -------Fieldset Styling----- */
+.rating-fieldset {
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .4rem;
+}
+
+.rating-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.rating-group input[type="radio"] {
+    margin-top: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 15px;
+}
+
+.emphasis-note {
+    color: rgb(165, 6, 6);
+    text-align: center;
+}
+/* Date of Installation styling */
+textarea,
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    border-radius: var(--border-radius);
+    padding: .7rem;
+    border: 1px solid #0056b3;
+}
+
+textarea:focus,
+input[type="text"],
+input[type="date"]:focus {
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.4);
+    outline: none;
+}
+
+/* checkbox styling */
+.checkbox {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+}
+
+/* .checkbox label */
+.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
+}
+
+.checkbox legend {
+    margin-bottom: .5rem;
+}
+
+/* Button styling */
+.button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    margin: 1rem auto;
+    color: #f7f9fc;
+    background-color: #0056b3;
+    border: 1px solid #000;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(1.01);
+}
+/* ----Footer styling------------ */
+footer {
+    background-color: var(--footer-bg-color);
+    padding: 1rem;
+    color: #212529;
+    text-align: center;
+}
+
+hr {
+    margin-bottom: 10px;
+}
