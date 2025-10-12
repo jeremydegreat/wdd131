@@ -2,7 +2,7 @@
     --HeadingFont:  'Poppins', sans-serif;
     --bodyFont: 'Roboto', sans-serif;
     --border-radius: 10px;
-    --header-bg-color: #0056b3;
+    --header-bg-color: #003366;
     --main-bg-color: #f7f9fc;
     --footer-bg-color: #343a40;
     
@@ -144,7 +144,7 @@ input[type="date"]:focus {
     font-size: 1rem;
     margin: 1rem auto;
     color: #f7f9fc;
-    background-color: #0056b3;
+    background-color: #003366;
     border: 1px solid #000;
 }
 
