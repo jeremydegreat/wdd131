@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Webfingers Advertising - Products Page</title>
+
+    <!-- Meta Tags -->
+    <meta name="title" content="Webfingers LTD - Advertisement Page">
+    <meta name="description" content="Discover Webfingersltd, offering premium IT services. Check out our exclusive advert to learn how we can help you achieve digital aim/goals.">
+    <meta name="keywords" content="web development, mobile development, cloud solutions, IT services, software development, digital transformation, technology consulting, custom software, web applications, mobile apps">
+    <meta name="author" content="Jeremy Great, Marketing Manager at Webfingers Ltd">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+     <!-- Favicon and other Links -->
+    <link rel="icon" type="image/png" href="images/myFavicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Css Linking -->
+    <link rel="stylesheet" href="styles/product.css">
+    <!-- JavaScript -->
+    <script src="scripts/webfingersads.js" defer></script>
+</head>
+<body>
+  <!-- ========== Header ========== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/logo_white.png" alt="Webfingers Ltd company logo">
+        <h1>Webfingers</h1>
+      </div>
+      <button id="hamburger" aria-label="Toggle navigation menu">☰</button>
+      <ul class="navlinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+      <section class="products-page">
+          <h2>Choose What We Can Do For "U"</h2>
+
+          <div class="product-card">
+            <div class="product-details">
+              
+              <!-- Left: Content -->
+              <div class="product-content">
+                <div class="content-group">
+                  <h3>Web & Mobile App Developments</h3>
+                  <p>We craft high-performing web and mobile applications tailored to your business goals. Using modern frameworks like Kotlin, Native, and Tailwind, we deliver responsive, secure, and user-friendly solutions that bring your ideas to life on every device.</p>
+                </div>
+                <div class="content-group">
+                  <h3>Research/Business Development</h3>
+                  <p>We conduct in-depth market and user research to identify growth opportunities and innovative strategies. Our team transforms data-driven insights into actionable business solutions that strengthen your brand, optimize performance, and accelerate sustainable growth.</p>
+                </div>
+                <div class="content-group">
+                  <h3>IT Consultancy</h3>
+                  <p>We provide expert IT consulting services to help businesses leverage technology effectively. From system integration to digital transformation, we guide organizations in making informed tech decisions that boost efficiency, security, and long-term performance.</p>
+                </div>
+                <div class="content-group">
+                  <h3>Broadcast Engineering</h3>
+                  <p>We offer professional Broadcast Engineering services that ensure seamless media transmission and production. Our team designs, installs, and maintains broadcast systems — from studio setups to signal distribution — ensuring high-quality, reliable, and efficient broadcasting operations across all platforms.</p>
+                </div>
+              </div> <!-- ✅ closed .product-content -->
+
+              <!-- Right: Form -->
+              <div class="product-form">
+                <form action="#" method="post">
+                  <fieldset>
+                    <legend>Book a Session with Us</legend>
+                    <p>Tell us what kind of app you need and how we can reach you...</p>
+
+                    <label for="appType">Type of App Needed:</label>
+                    <select id="appType" name="appType" required>
+                      <option value="">-- Select an option --</option>
+                      <option value="web">Web Application</option>
+                      <option value="mobile">Mobile Application</option>
+                      <option value="both">Both Web & Mobile</option>
+                      <option value="Website">Website</option>
+                      <option value="consulting">IT Consultation</option>
+                      <option value="broadcasting">Broadcasting Engineering</option>
+                      <option value="research">Research/Business Development</option>
+                    </select>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+234 801 234 5678" required>
+
+                    <label for="date">Preferred Meeting Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="time">Preferred Time:</label>
+                    <input type="time" id="time" name="time" required>
+
+                    <button type="submit" class="submit-btn">Book Session</button>
+                  </fieldset>
+                </form>
+              </div> <!-- ✅ closed .product-form -->
+
+            </div> <!-- ✅ closed .product-details -->
+          </div> <!-- ✅ closed .product-card -->
+
+      </section>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer>
+      <p>© 2025 Webfingers Ltd. All rights reserved.</p>
+      <p><a href="references.html" style="color: #f8b400;">References</a></p>
+      <p id="lastmodified"></p>
+  </footer>
+
+</body>
+</html>

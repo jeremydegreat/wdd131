@@ -1,0 +1,431 @@
+/* ========== Root Variables ========== */
+:root {
+  /* Brand colors */
+  --color-primary: #f8b400;
+  --color-primary-dark: #d49c00;
+  --color-bg:  #F8F1E4;
+  --color-text: #2C2C2C;
+  --color-light-text: #fff;
+  --color-accent: #111;
+
+  /* Font settings */
+  --font-heading: "Poppins", Arial, sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-size-base: 16px;
+  --font-size-heading: 2rem;
+
+  /* Spacing and radius */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 30px;
+  --padding-section: 40px;
+  --transition-speed: 0.3s;
+
+  /* Shadows */
+  --shadow-soft: 0 3px 8px rgba(62, 105, 186, 0.35);
+}
+
+/* ========== Global Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+}
+
+p {
+  color: var(--color-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-speed);
+}
+
+
+/* ========== Header & Navigation ========== */
+header {
+  background-color: var(--color-accent);
+  color: var(--color-light-text);
+  padding: 10px 0;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: start;
+}
+
+.logo img {
+  width: 100%;
+  height: fit-content;
+}
+
+.logo h1 {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navlinks li a {
+  color: var(--color-light-text);
+}
+
+.navlinks li a:hover,
+.navlinks li a.active {
+  color: var(--color-primary);
+}
+
+/* Hamburger button (mobile view) */
+#hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: var(--color-light-text);
+  border: none;
+  cursor: pointer;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  background: linear-gradient(to right, #000000aa, #00000055),
+              url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7") center/cover no-repeat;
+  color: var(--color-light-text);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #ccc;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ccc;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+}
+
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  padding: 10px 20px;
+  border-radius: var(--radius-lg);
+  font-weight: bold;
+  transition: background var(--transition-speed);
+}
+
+.btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* ========== Index html Section ========== */
+.products {
+  width: 90%;
+  margin: var(--padding-section) auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.products h2 {
+  margin-bottom: 20px;
+  color: var(--color-accent);
+  font-size: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px; 
+}
+
+/* ========== Product Card ============= */
+.product-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition-speed);
+}
+
+.pdt-card-head {
+  background-color: rgba(249, 234, 195, 0.35);
+  margin: -20px -20px 0 -20px;
+  padding: .7rem;
+  border-top-right-radius: var(--radius-md);
+  border-top-left-radius: var(--radius-md);
+  border-bottom-style: outset;
+  height: 80px;
+  display: flex;
+  gap: .5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdt-card-head svg {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  background-color: #2C2C2C;
+  border-radius: 5px;
+  padding: .3rem;
+}
+
+/* ========== Card Content ============= */
+.pdt-card-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: .5rem;
+  gap: .3rem;
+  font-size: .6rem;
+  line-height: 1.1; 
+}
+
+/* ========== Content Group ============= */
+.cnt-group {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.cnt-group i {
+  font-size: 0.6rem;
+  color: #f8b400;
+  padding: 2px;
+  border-radius: 3px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.link {
+  width: 15%;
+  background: linear-gradient(to right, #111 70%, #444);
+  color: var(--color-primary);
+  margin-top: 10px;
+  padding: .4rem;
+  border-radius: 5px;
+}
+
+.link i {
+  transition: transform 0.3s ease;
+}
+
+.link:hover i {
+  transform: translateX(5px);
+}
+
+/* Question styling */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  width: 90%;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: var(--radius-sm);
+}
+
+.content h3 {
+  color: #fff;
+}
+
+
+.content p {
+  color: rgb(211, 210, 210);
+}
+.button {
+  display: flex;
+  gap: 1rem;
+}
+
+.button a {
+  border-radius: var(--radius-lg);
+  background-color: #f8b400;
+  color: #111;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.button a:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+
+/* ========== Footer ========== */
+footer {
+  background: var(--color-accent);
+  color: var(--color-light-text);
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+footer p,
+#lastmodified {
+  color: rgb(197, 197, 197);
+}
+
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .navlinks {
+    display: none;
+    position: absolute;
+    top: 60px; /* adjust to your navbar height */
+    right: 20px;
+    background: #111;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 999;
+  }
+
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+   .navlinks.active {
+    display: flex;
+    animation: slideDown 0.3s ease;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .hero {
+    padding: 80px 10px;
+  }
+
+  .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  }
+
+  .products h2 {
+    font-size: 1rem;
+  }
+  /* ===Question scetion */
+  .content h3 {
+  font-size: 1rem;
+  }
+
+
+  .content p {
+    color: rgb(211, 210, 210);
+    font-size: .7rem;
+    text-align: center;
+  }
+
+  .button a {
+    font-size: 1rem;
+    padding: .8rem;
+  }
+
+  /* ========== Product Card ============= */
+  .product-card {
+    margin-top: .5rem;
+  }
+
+  .pdt-card-head {
+    gap: .2rem;
+  }
+
+  .pdt-card-head h3 {
+    font-size: 1rem;
+  }
+
+  .pdt-card-head svg {
+    height: 30px;
+    width: 30px;
+  }
+
+  /* ========== Card Content ============= */
+  .pdt-card-content {
+    gap: .1rem;
+    font-size: .4rem;
+    font-weight: 600;
+    line-height: 1; 
+  }
+
+  /* ========== Content Group ============= */
+  .cnt-group i {
+    font-size: 0.6rem;
+    color: #f8b400;
+    padding: 2px;
+    border-radius: 3px;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .link {
+    width: 30%;
+  }
+
+  /* ===Products Html=== */
+  .products-form {
+    padding: 30px 20px;
+  }
+
+  .products-form legend {
+    font-size: 1.4rem;
+  }
+
+  .products-form p {
+    font-size: 0.9rem;
+  }
+
+
+}

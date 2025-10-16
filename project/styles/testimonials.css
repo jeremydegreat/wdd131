@@ -1,0 +1,233 @@
+/* ========== Root Variables ========== */
+:root {
+  /* Brand colors */
+  --color-primary: #f8b400;
+  --color-primary-dark: #d49c00;
+  --color-bg:  #F8F1E4;
+  --color-text: #2C2C2C;
+  --color-light-text: #fff;
+  --color-accent: #111;
+
+  /* Font settings */
+  --font-heading: "Poppins", Arial, sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --font-size-base: 16px;
+  --font-size-heading: 2rem;
+
+  /* Spacing and radius */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --radius-lg: 30px;
+  --padding-section: 40px;
+  --transition-speed: 0.3s;
+
+  /* Shadows */
+  --shadow-soft: 0 3px 8px rgba(62, 105, 186, 0.35);
+}
+
+/* ========== Global Styles ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+}
+
+p {
+  color: var(--color-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-speed);
+}
+
+
+/* ========== Header & Navigation ========== */
+header {
+  background-color: var(--color-accent);
+  color: var(--color-light-text);
+  padding: 10px 0;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: start;
+}
+
+.logo img {
+  width: 100%;
+  height: fit-content;
+}
+
+.logo h1 {
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navlinks li a {
+  color: var(--color-light-text);
+}
+
+.navlinks li a:hover,
+.navlinks li a.active {
+  color: var(--color-primary);
+}
+
+/* Hamburger button (mobile view) */
+#hamburger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: var(--color-light-text);
+  border: none;
+  cursor: pointer;
+}
+
+/* ========== Testimonials Section ========== */
+.testimonials {
+  width: 90%;
+  margin: var(--padding-section) auto;
+  text-align: center;
+  color: #fff;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: var(--color-accent, #f8b400);
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(248, 180, 0, 0.4);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+/* ====== Card Style ====== */
+.testimonial-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 0 20px rgba(248, 180, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(248, 180, 0, 0.5);
+}
+
+/* Text Styles */
+.testimonial-card blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+  margin-bottom: 15px;
+}
+
+.testimonial-card footer {
+  font-weight: bold;
+  color: var(--color-accent, #f8b400);
+  font-size: 0.95rem;
+}
+
+/* ========== Footer ========== */
+footer {
+  background: var(--color-accent);
+  color: var(--color-light-text);
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+footer p,
+#lastmodified {
+  color: rgb(197, 197, 197);
+}
+
+/* ========== Responsive for 768px and Below ========== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #hamburger {
+    display: block;
+    margin-left: auto; /* pushes it to the right */
+    font-size: 1.8rem;
+    color: var(--color-light-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .navlinks {
+    position: absolute;
+    top: 60px; /* just below the header */
+    right: 0;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px 0;
+    display: none;
+    transition: all var(--transition-speed) ease;
+  }
+
+  .navlinks.active {
+    display: flex;
+  }
+}
+
+
